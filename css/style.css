@@ -1,0 +1,77 @@
+.div_image_fond{
+    height: 60vh;
+    overflow: hidden;
+    position: relative; /* Position relative pour que les images soient positionnées par rapport à ce conteneur */
+}
+
+.image_fond{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: all 0.5s ease;
+    opacity: 50%;
+    position: absolute; /* Position absolue pour superposer cette image */
+}
+
+
+.image_coach {
+    height: 90%;
+    opacity: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: absolute; /* Position absolue pour l'image du coach */
+    top: 5%;
+    left: 5%; /* Déplacez l'image vers la gauche par rapport à son conteneur */
+}
+
+.div_text_coach{
+    position: absolute; /* Position absolue pour le texte du coach */
+    right: 5%; /* Déplacez le texte vers la droite par rapport à son conteneur */
+    top: 2.5%;
+    width: 60%;
+    height: 90%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text_coach{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: justify;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+}
+
+.text_coach h1{
+    text-align: center;
+}
+
+.certificat {
+    max-width: 20%;
+    position: absolute;
+    bottom: 5%;
+    right: 5%; /* Déplacez l'image vers la droite */
+}
+
+.text_coach_contact{
+    padding-left: 5%;   
+    margin-top: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+

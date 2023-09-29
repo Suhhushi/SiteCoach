@@ -3,7 +3,13 @@
 include("../includes/connexion.php");
 
 $sqlSeance = "SELECT * FROM seance, sport, salle WHERE seance.ID_SALLE = salle.ID_SALLE AND seance.ID_SPORT = sport.ID_sport ORDER BY JOUR, HEUR_DEBUT";
-$resultatSeance = $connexion->query($sqlSeance);
+try{
+    $resultatSeance = $connexion->query($sqlSeance);
+
+}
+catch(PDOException $e){
+    die("\n Erreur de la requete SQL: ".$e->getMessage());
+}
 
 while ($ligneSeance = $resultatSeance->fetch()) {
     $jour_seance = $ligneSeance["JOUR"];

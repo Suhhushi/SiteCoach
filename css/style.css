@@ -1,3 +1,7 @@
+#presentation {
+    position: relative; /* Update to relative position */
+}
+
 .div_image_fond{
     height: 60vh;
     overflow: hidden;
@@ -74,4 +78,33 @@ body {
     padding: 0;
 }
 
+.div_programme{
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.div_programme h1{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    opacity: 100%;
+}
+
+.div_programme h2{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.div_programme p{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.div_image_fond_programme{
+    height: 60vh;
+    overflow: hidden;
+    position: relative; /* Position relative pour que les images soient positionnées par rapport à ce conteneur */
+}
 

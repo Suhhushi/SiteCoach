@@ -21,6 +21,7 @@
         <ul class="nav_links">
             <li><a href="./index.php">Accueil</a></li>
             <li><a href="./pages/Seance.php">Seance</a></li>
+            <li><a href="./pages/connexionUtilisateur.php">Connexion</a></li>
         </ul>
     </nav>
     <main>

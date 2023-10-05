@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $hote="localhost";
 $login= "root";
 $mdp = "";

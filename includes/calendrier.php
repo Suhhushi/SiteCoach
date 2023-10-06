@@ -37,9 +37,6 @@ foreach ($seances_par_jour as $jour => $seances) {
         case "5":
             echo '<th> Vendredi </th>';
             break;
-        case "6":
-            echo '<th> Vendredi </th>';
-            break;
     }
 }
 echo '</tr>';
@@ -56,7 +53,20 @@ for ($i = 0; $i < $max_seances; $i++) {
             echo '<p>' . $seance["VILLE"] . '</p>';
             echo '<p>' . $seance["HEUR_DEBUT"] . '-' . $seance["HEUR_FIN"] . '</p>';
             echo '<p>' . $seance["LIBELLE"] . '</p>';
-            echo '<b> Niveau : ' . $seance["NIVEAU"] . '</b>';
+            switch($seance['NIVEAU']){
+                case "1": 
+                    echo '<p>Debutant</p>';
+                    break;
+                case "2": 
+                    echo '<p>Intermediaire</p>';
+                    break;
+                case "3": 
+                    echo '<p>Expert</p>';
+                    break;
+                default:
+                    echo '<p>Tout niveau</p>';
+                    break;
+            }
             echo '</td>';
         } else {
             echo '<td></td>';

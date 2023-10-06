@@ -29,6 +29,9 @@
                 <label for="mdp">Mot de passe :</label>
                 <input type="password" id="mdp" name="mdp" required>
             </div>
+            <div>
+                <p>Vous n'avez pas de compte ? <a href="#">Inscrivez-vous ici</a></p>
+            </div>
             <div class="form-group">
                 <input type="submit" value="Se Connecter">
             </div>

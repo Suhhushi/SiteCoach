@@ -1,4 +1,3 @@
-
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -30,11 +29,4 @@
 /* Style de survol pour les liens */
 .nav_links li a:hover {
     text-decoration: underline;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    margin: 0;
-    padding: 0;
 }

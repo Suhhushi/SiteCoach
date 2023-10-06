@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/connexionUtilisateur.css">
-    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/body.css">
     <title>Formulaire de Connexion</title>
 
 </head>
@@ -30,7 +30,7 @@
                 <input type="password" id="mdp" name="mdp" required>
             </div>
             <div>
-                <p>Vous n'avez pas de compte ? <a href="#">Inscrivez-vous ici</a></p>
+                <p>Vous n'avez pas de compte ? <a href="./inscriptionUtilisateur.php">Inscrivez-vous ici</a></p>
             </div>
             <div class="form-group">
                 <input type="submit" value="Se Connecter">

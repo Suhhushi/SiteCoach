@@ -1,6 +1,6 @@
 <?php
 
-include("../includes/connexion.php");
+include("./includes/connexion.php");
 
 $sqlSeance = "SELECT * FROM seance, sport, salle WHERE seance.ID_SALLE = salle.ID_SALLE AND seance.ID_SPORT = sport.ID_sport ORDER BY JOUR, HEUR_DEBUT";
 try{

@@ -1,7 +1,3 @@
-<?php
-    session_start();
-?>
-
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
@@ -18,9 +14,9 @@
         <ul class="nav_links">
             <li><a href="./index.php">Accueil</a></li>
             <?php
-            if ($_SESSION['connected'] == true){
+            if (isset($_SESSION['connected']) == true){
                 echo '<li><a href="./Seance.php">Seance</a></li>';
-                echo '<li><a href="deconnexion.php">Deconnexion</a></li>';
+                echo '<li><a href="./includes/deconnexion.php">Deconnexion</a></li>';
             }
             else
                 echo '<li><a href="./connexionUtilisateur.php">Connexion</a></li>';

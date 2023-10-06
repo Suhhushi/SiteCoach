@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -12,7 +15,7 @@
 
 <body>
     <header>
-        <?php include("./includes/navBar.php"); ?>s
+        <?php include("./includes/navBar.php"); ?>
     </header>
 
     <div class="container">

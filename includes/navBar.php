@@ -1,6 +1,5 @@
 <?php
     session_start();
-    $_SESSION['connected'] = false;
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +20,7 @@
             <?php
             if ($_SESSION['connected'] == true){
                 echo '<li><a href="./Seance.php">Seance</a></li>';
-                echo '<li><a href="./deconnexion.php">Deconnexion</a></li>';
+                echo '<li><a href="deconnexion.php">Deconnexion</a></li>';
             }
             else
                 echo '<li><a href="./connexionUtilisateur.php">Connexion</a></li>';

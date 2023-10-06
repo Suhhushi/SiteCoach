@@ -13,17 +13,9 @@
 </head>
 
 <body>
-
-    <nav class="navbar">
-        <div class="logo">
-            <img src="./assets/image/logoCoach.png" alt="Logo">
-        </div>
-        <ul class="nav_links">
-            <li><a href="./index.php">Accueil</a></li>
-            <li><a href="./pages/Seance.php">Seance</a></li>
-            <li><a href="./pages/connexionUtilisateur.php">Connexion</a></li>
-        </ul>
-    </nav>
+    <header>
+        <?php include("./includes/navBar.php"); ?>
+    </header>
     <main>
         <section id="presentation">
             <div class="div_image_fond">
@@ -55,7 +47,7 @@
                         <div class="div_programme_text_1">
                             <h2>Programme Musculation</h2>
                             <p>
-                            Renforcez votre corps avec notre programme de musculation. Des exercices ciblés pour des résultats rapides.                            </p>
+                                Renforcez votre corps avec notre programme de musculation. Des exercices ciblés pour des résultats rapides. </p>
                         </div>
                         <div class="div_programme_text_2">
                             <h2>Programme Foot</h2>

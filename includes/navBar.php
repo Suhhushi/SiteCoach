@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    $_SESSION['connected'] = false;
+?>
+
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
@@ -12,9 +17,15 @@
             <img src="../assets/image/logoCoach.png" alt="Logo">
         </div>
         <ul class="nav_links">
-            <li><a href="../index.php">Accueil</a></li>
-            <li><a href="./Seance.php">Seance</a></li>
-            <li><a href="./connexionUtilisateur.php">Connexion</a></li>
+            <li><a href="./index.php">Accueil</a></li>
+            <?php
+            if ($_SESSION['connected'] == true){
+                echo '<li><a href="./Seance.php">Seance</a></li>';
+                echo '<li><a href="./deconnexion.php">Deconnexion</a></li>';
+            }
+            else
+                echo '<li><a href="./connexionUtilisateur.php">Connexion</a></li>';
+            ?>
         </ul>
 </nav>
     

@@ -1,51 +1,24 @@
 <?php
-	include("verifyConnexion.php");
-	
-    $idSaisi = $_SESSION['idUtilisateur'];
-    $mdpSaisi = $_SESSION['mdp'];
+	function connecter(){
+		include("connexion.php");
 
-    $sql = "SELECT * FROM utilisateur WHERE login = '$idSaisi'";
-	$result = $connexion->query($sql);
-	$ligne = $result->fetch();
+		$idSaisi = $_POST['idUtilisateur'];
+		$mdpSaisi = $_POST['mdp'];
+		$connected = false;
 
-	if  (!$ligne)
-	{
-		echo "<script>alert('Votre login ou mot de passe est incorrect');</script>"; 
+		$sql = "SELECT * FROM utilisateur WHERE login = '$idSaisi'";
+		$result = $connexion->query($sql);
 
-		include("idmdp.php");
+		while($ligne = $result->fetch()){
+			if ($ligne['mdp'] == $mdpSaisi){
+				$connected = true;
+				header("Location: ../index.php");
+			}
+		}
+		$connexion = NULL;
 
-		exit; 
-	}
-	else{
-		$motPasseBdd = $ligne['mdp'];
-	}
-
-	if  ($mdpSaisi != $motPasseBdd )
-	{
-		echo "<script>alert('Votre login ou mot de passe est incorrect');</script>"; 
-		include("idmdp.php");
-
-		exit; 
-	}
-	else
-	{
-		
-		$_SESSION['connecte'] = true;
-		
-        if ($ligne['poste'] == "comptable"){
-            header('Location: ../pageComptable/comptable.php');
-
-        }
-        else{
-            if($ligne['poste'] == "medicale"){
-                header('Location: ../pageVisiteur/visiteur.php');
-            }
-        }
-
-		ob_end_flush();
-
-		exit;
+		return $connected;
 	}
 
-	$connexion = NULL;
+	connecter();
 ?>

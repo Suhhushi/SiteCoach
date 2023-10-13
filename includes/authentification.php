@@ -1,6 +1,7 @@
 <?php
 	session_start();	
 	$_SESSION['connected'] = false;
+	$_SESSION['admin'] = false;
 
 	function connecter(){
 		include("../includes/connexion.php");
@@ -14,6 +15,9 @@
 
 		while($ligne = $result->fetch()){
 			if ($ligne['mdp'] == $mdpSaisi){
+				if ($ligne['type'] == 1){
+					$_SESSION['admin'] = true;
+				}
 				$_SESSION['connected'] = true;
 				$connected = true;
 				header("Location: ../index.php");

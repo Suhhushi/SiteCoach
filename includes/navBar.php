@@ -15,9 +15,12 @@
         <ul class="nav_links">
             <li><a href="./index.php">Accueil</a></li>
             <?php
-            if (isset($_SESSION['connected']) == true){
+            if (isset($_SESSION['connected']) == true && $_SESSION['connected'] == true){
                 echo '<li><a href="./Seance.php">Seance</a></li>';
                 echo '<li><a href="./includes/deconnexion.php">Deconnexion</a></li>';
+                if(isset($_SESSION['admin']) == true && $_SESSION['admin'] == true){
+                    echo '<li><a href="./admin.php">Gérer Tableau</a></li>';
+                }
             }
             else
                 echo '<li><a href="./connexionUtilisateur.php">Connexion</a></li>';

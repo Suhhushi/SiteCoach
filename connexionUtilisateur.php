@@ -1,5 +1,5 @@
 <?php
-    session_start();
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -17,26 +17,27 @@
     <header>
         <?php include("./includes/navBar.php"); ?>
     </header>
-
-    <div class="container">
-        <h2>Connexion</h2>
-        <form action="./includes/authentification.php" method="POST">
-            <div class="form-group">
-                <label for="idUtilisateur">Nom d'utilisateur :</label>
-                <input type="text" id="idUtilisateur" name="idUtilisateur" required>
-            </div>
-            <div class="form-group">
-                <label for="mdp">Mot de passe :</label>
-                <input type="password" id="mdp" name="mdp" required>
-            </div>
-            <div>
-                <p>Vous n'avez pas de compte ? <a href="./inscriptionUtilisateur.php">Inscrivez-vous ici</a></p>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Se Connecter">
-            </div>
-        </form>
-    </div>
+    <main>
+        <div class="container">
+            <h2>Connexion</h2>
+            <form action="./includes/authentification.php" method="POST">
+                <div class="form-group">
+                    <label for="idUtilisateur">Nom d'utilisateur :</label>
+                    <input type="text" id="idUtilisateur" name="idUtilisateur" required>
+                </div>
+                <div class="form-group">
+                    <label for="mdp">Mot de passe :</label>
+                    <input type="password" id="mdp" name="mdp" required>
+                </div>
+                <div>
+                    <p>Vous n'avez pas de compte ? <a href="./inscriptionUtilisateur.php">Inscrivez-vous ici</a></p>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Se Connecter">
+                </div>
+            </form>
+        </div>
+    </main>
 </body>
 
 </html>

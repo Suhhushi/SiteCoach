@@ -1,3 +1,11 @@
+.titre_inscription {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: #007BFF;
+    font-weight: bold;
+}
+
 form {
     max-width: 400px;
     margin: 0 auto;

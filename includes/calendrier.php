@@ -2,11 +2,36 @@
 
 include("./includes/connexion.php");
 
-$sqlSeance = "SELECT * FROM seance, sport, salle WHERE seance.ID_SALLE = salle.ID_SALLE AND seance.ID_SPORT = sport.ID_sport ORDER BY JOUR, HEUR_DEBUT";
-try{
-    $resultatSeance = $connexion->query($sqlSeance);
+$sport_filter = isset($_GET['sport']) ? $_GET['sport'] : '';
+$niveau_filter = isset($_GET['niveau']) ? $_GET['niveau'] : '';
+$sqlSeance = "SELECT * FROM seance, sport, salle WHERE seance.ID_SALLE = salle.ID_SALLE AND seance.ID_SPORT = sport.ID_sport";
 
+if (!empty($sport_filter)) {
+    $sqlSeance .= " AND sport.ID_sport = :sport";
 }
+
+if (!empty($niveau_filter)) {
+    $sqlSeance .= " AND seance.NIVEAU = :niveau";
+}
+
+$sqlSeance .= " ORDER BY JOUR, HEUR_DEBUT";
+
+try {
+    $resultatSeance = $connexion->prepare($sqlSeance);
+
+    if (!empty($sport_filter)) {
+        $resultatSeance->bindParam(':sport', $sport_filter);
+    }
+
+    if (!empty($niveau_filter)) {
+        $resultatSeance->bindParam(':niveau', $niveau_filter);
+    }
+
+    $resultatSeance->execute();
+} catch (PDOException $e) {
+    die("\n Erreur de la requête SQL: " . $e->getMessage());
+}
+
 catch(PDOException $e){
     die("\n Erreur de la requete SQL: ".$e->getMessage());
 }

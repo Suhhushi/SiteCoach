@@ -1,0 +1,41 @@
+/* Style du conteneur du formulaire */
+.div_filtre {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* Style des libellés */
+.div_filtre label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Style des sélecteurs de liste déroulante */
+.div_filtre select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Style du bouton de soumission */
+.div_filtre input[type="submit"] {
+    background-color: #007bff; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Style du bouton au survol */
+.div_filtre input[type="submit"]:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+}

@@ -39,10 +39,11 @@ if (!isset($_SESSION['connected']) || $_SESSION['connected'] == false) {
                 <option value="2">Intermédiaire</option>
                 <option value="3">Expert</option>
             </select>
-    </div>
 
-    <input type="submit" value="Filtrer">
-    </form>
+
+            <input type="submit" value="Filtrer">
+        </form>
+    </div>
 
     <?php include("./includes/calendrier.php"); ?>
 

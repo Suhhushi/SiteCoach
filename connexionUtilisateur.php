@@ -22,8 +22,8 @@ session_start();
             <h2>Connexion</h2>
             <form action="./includes/authentification.php" method="POST">
                 <div class="form-group">
-                    <label for="idUtilisateur">Nom d'utilisateur :</label>
-                    <input type="text" id="idUtilisateur" name="idUtilisateur" required>
+                    <label for="email">Nom d'utilisateur :</label>
+                    <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
                     <label for="mdp">Mot de passe :</label>

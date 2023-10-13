@@ -5,11 +5,11 @@
 	function connecter(){
 		include("../includes/connexion.php");
 
-		$idSaisi = $_POST['idUtilisateur'];
-		$mdpSaisi = $_POST['mdp'];
+		$email = $_POST['email'];
+		$mdpSaisi = md5($_POST['mdp']);
 		$connected = false;
 
-		$sql = "SELECT * FROM utilisateur WHERE idUtilisateur = '$idSaisi'";
+		$sql = "SELECT * FROM utilisateur WHERE email = '$email'";
 		$result = $connexion->query($sql);
 
 		while($ligne = $result->fetch()){

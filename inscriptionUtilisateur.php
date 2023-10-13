@@ -19,14 +19,14 @@
         <h1 class="titre_inscription">Inscription</h1>
     </div>
     <main>
-        <form action="traitement.php" method="post" onsubmit="return validateForm()">
+        <form action="./includes/inscription.php" method="POST" onsubmit="return validateForm()">
             <label for="nom">Nom :</label>
             <input type="text" name="nom" id="nom" required>
 
             <label for="prenom">Prénom :</label>
             <input type="text" name="prenom" id="prenom" required>
 
-            <label for="email">E-mail :</label>
+            <label for="email">Mail :</label>
             <input type="email" name="email" id="email" required>
 
             <label for="motdepasse">Mot de passe :</label>

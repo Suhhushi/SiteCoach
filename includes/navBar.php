@@ -19,7 +19,7 @@
                 echo '<li><a href="./Seance.php">Seance</a></li>';
                 echo '<li><a href="./includes/deconnexion.php">Deconnexion</a></li>';
                 if(isset($_SESSION['admin']) == true && $_SESSION['admin'] == true){
-                    echo '<li><a href="./admin.php">Gérer Tableau</a></li>';
+                    echo '<li><a href="./gereTableauAdmin.php">Gérer Tableau</a></li>';
                 }
             }
             else

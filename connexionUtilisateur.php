@@ -1,10 +1,3 @@
-<?php
-    session_start();
-
-    if(isset($_SESSION['connected'])){
-        header("Location: ./index.php");
-    }
-?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -26,7 +19,7 @@
             <h2>Connexion</h2>
             <form action="./includes/authentification.php" method="POST">
                 <div class="form-group">
-                    <label for="email">Nom d'utilisateur :</label>
+                    <label for="email">Email :</label>
                     <input type="text" id="email" name="email" required>
                 </div>
                 <div class="form-group">
